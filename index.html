@@ -3,43 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Inscrição</title>
+    <title>Vagas de Estágio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
-        <h1>Formulário de Inscrição</h1>
 
-        <form id="formulario">
-            <label for="nome">Nome completo:</label>
-            <input type="text" id="nome" required>
+        <header>
+            <h1>Vagas de Estágio</h1>
+            <p>Cadastre e encontre oportunidades de estágio.</p>
+        </header>
 
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" required>
+        <form id="formVaga">
 
-            <label for="whatsapp">WhatsApp:</label>
-            <input type="tel" id="whatsapp" required>
+            <input type="text" id="empresa" placeholder="Nome da empresa" required>
 
-            <button type="submit">Se inscreva</button>
+            <input type="text" id="vaga" placeholder="Nome da vaga" required>
+
+            <input type="text" id="area" placeholder="Área de atuação" required>
+
+            <input type="text" id="local" placeholder="Localização" required>
+
+            <input type="email" id="email" placeholder="E-mail para contato" required>
+
+            <textarea id="descricao" placeholder="Descrição da vaga" required></textarea>
+
+            <button type="submit">Cadastrar vaga</button>
+
         </form>
 
-        <h2>Inscritos</h2>
+        <h2>Vagas disponíveis</h2>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Nome completo</th>
-                    <th>E-mail</th>
-                    <th>WhatsApp</th>
-                </tr>
-            </thead>
+        <div class="tabela">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Empresa</th>
+                        <th>Vaga</th>
+                        <th>Área</th>
+                        <th>Local</th>
+                        <th>Contato</th>
+                    </tr>
+                </thead>
 
-            <tbody id="tabela">
-            </tbody>
-        </table>
+                <tbody id="listaVagas">
+                </tbody>
+            </table>
+        </div>
+
     </div>
 
     <script src="script.js"></script>
+
 </body>
 </html>

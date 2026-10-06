@@ -1,22 +1,26 @@
-const formulario = document.getElementById("formulario");
-const tabela = document.getElementById("tabela");
+const formulario = document.getElementById("formVaga");
+const listaVagas = document.getElementById("listaVagas");
 
 formulario.addEventListener("submit", function(event) {
     event.preventDefault();
 
-    const nome = document.getElementById("nome").value;
+    const empresa = document.getElementById("empresa").value;
+    const vaga = document.getElementById("vaga").value;
+    const area = document.getElementById("area").value;
+    const local = document.getElementById("local").value;
     const email = document.getElementById("email").value;
-    const whatsapp = document.getElementById("whatsapp").value;
 
-    const novaLinha = document.createElement("tr");
+    const linha = document.createElement("tr");
 
-    novaLinha.innerHTML = `
-        <td>${nome}</td>
+    linha.innerHTML = `
+        <td>${empresa}</td>
+        <td>${vaga}</td>
+        <td>${area}</td>
+        <td>${local}</td>
         <td>${email}</td>
-        <td>${whatsapp}</td>
     `;
 
-    tabela.appendChild(novaLinha);
+    listaVagas.appendChild(linha);
 
     formulario.reset();
 });
